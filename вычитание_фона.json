@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "background_method": "gaussian",
+  "correction_method": "subtract",
+  "background_params": {
+    "pre_blur_kernel": 5,
+    "pre_blur_sigma": 0.0,
+    "background_kernel": 151,
+    "background_sigma": 0.0,
+    "background_floor": 1.0
+  },
+  "correction_params": {
+    "strength": 1.0
+  },
+  "output_params": {
+    "auto_stretch": true,
+    "low_percentile": 1.0,
+    "high_percentile": 99.0
+  }
+}
