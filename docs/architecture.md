@@ -19,6 +19,12 @@
 - [README.md](../README.md)
   Главная страница проекта: краткое описание, установка, запуск и ссылки на документы.
 
+- [run.py](../run.py)
+  Быстрый локальный запуск приложения из корня проекта без обращения к файлам внутри `src/`.
+
+- [tests/](../tests/)
+  Базовый каталог для тестов: benchmark, e2e, examples, integration, tools и unit.
+
 - [pyproject.toml](../pyproject.toml)
   Главный файл Python-проекта. Здесь лежат зависимости, версия Python и точка входа.
 
@@ -39,13 +45,10 @@
 - [architecture.md](./architecture.md)
   Этот файл.
 
-### Папка `image_illumination_corrector/`
+### Папка `src/image_illumination_corrector/`
 
 - [__main__.py](../src/image_illumination_corrector/__main__.py)
-  Точка входа для запуска через `python -m image_illumination_corrector`.
-
-- [app.py](../src/image_illumination_corrector/app.py)
-  Небольшой стартовый файл, который поднимает приложение.
+  Единая внутренняя точка входа для запуска через `python -m image_illumination_corrector`, `run.py` и console script.
 
 - [ui.py](../src/image_illumination_corrector/ui.py)
   Весь интерфейс на `tkinter`: окна, кнопки, ползунки, списки методов и работа с событиями.
@@ -68,7 +71,8 @@
 ### Остальные папки
 
 - `presets/` - пользовательские пресеты.
-- `images/` - тестовые и рабочие изображения.
+- `images/` - пустой каталог под локальные примеры и ручные проверки, удерживается в git через `.gitkeep`.
+- `tests/` - каркас для benchmark, e2e, examples, integration, tools и unit тестов.
 - `.github/workflows/` - автоматическая сборка через GitHub Actions.
 
 ## Как идёт работа программы

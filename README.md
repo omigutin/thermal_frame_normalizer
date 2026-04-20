@@ -28,27 +28,47 @@ poetry env use 3.12
 poetry install
 ```
 
+## Быстрый запуск
+
+После установки зависимостей основной локальный запуск идёт через корневой файл:
+
+```bash
+python run.py
+```
+
 ## Запуск через Poetry
 
 ```bash
-poetry run python -m image_illumination_corrector
+poetry run python run.py
 ```
 
 ## Запуск без Poetry
 
 ```bash
 py -3.12 -m venv .venv
-.venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 pip install -e .
-python -m image_illumination_corrector
+python run.py
 ```
 
 ## Структура проекта
 
-- `image_illumination_corrector/` - исходный код приложения
+- `run.py` - быстрый запуск приложения из корня проекта
+- `src/image_illumination_corrector/` - исходный код приложения
+- `tests/` - базовая структура для benchmark, e2e, examples, integration, tools и unit
 - `docs/` - документация
+- `images/` - каталог для локальных примеров, в git хранится пустым через `.gitkeep`
 - `presets/` - пресеты пользователя
-- `images/` - тестовые и рабочие изображения
+
+## Альтернативные способы запуска
+
+После `pip install -e .` также работают:
+
+```bash
+python -m image_illumination_corrector
+image-illumination-corrector
+```
 
 ## Сборки
 

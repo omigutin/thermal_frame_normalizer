@@ -18,12 +18,20 @@ dependencies = [
 ]
 
 [project.scripts]
-image-illumination-corrector = "image_illumination_corrector.app:main"
+image-illumination-corrector = "image_illumination_corrector.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
+where = ["src"]
 include = ["image_illumination_corrector*"]
 
 [dependency-groups]
 dev = [
+    "pytest>=8.3",
     "pyinstaller (>=6.19.0,<7.0.0)"
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

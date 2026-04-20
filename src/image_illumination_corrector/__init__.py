@@ -1,7 +1,6 @@
 """Interactive tools for vignette reduction and image illumination correction."""
 
 __all__ = [
-    "app",
     "batch",
     "models",
     "presets",

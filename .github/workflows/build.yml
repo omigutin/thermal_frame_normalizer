@@ -30,7 +30,7 @@ jobs:
 
       - name: Build binary
         run: |
-          python -m PyInstaller --noconfirm --clean --onefile --name image-illumination-corrector image_illumination_corrector/__main__.py
+          python -m PyInstaller --noconfirm --clean --onefile --name image-illumination-corrector run.py
 
       - name: Pack artifact
         run: |
